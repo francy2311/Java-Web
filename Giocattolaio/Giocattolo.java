@@ -28,5 +28,4 @@ public class Giocattolo {
 
         return descrizione;
     }
-
 }
