@@ -25,12 +25,12 @@ public class Test {
         // questi sono i parametri per cercare le vendite
         vendite.add(new Vendita(giocattoli.get(0),clienti.get(0))); 
         
-        System.out.println(vendite.toString());
+        // System.out.println(vendite.toString());
 
-        inventario.visualizzaGiochi(giocattoli);
+        // inventario.visualizzaGiochi(giocattoli);
 
         System.out.println("--------------------------------------------------");
-        System.out.println("INserisci Nome Utente");
+        System.out.println("Inserisci Nome Utente");
         n_utente=s.nextLine();
 
         if (n_utente.equals(N_UTENTE)) {
@@ -51,9 +51,23 @@ public class Test {
             }
         }else{
             System.out.println("Non sei un admin\n");
-            inventario.visualizzaGiochi(giocattoli);
+            System.out.println("Vuoi acquistare un giocattolo(si/no)");
+            String risp=s.nextLine();
+            if (risp.equals("si")) {
+                inventario.visualizzaGiochi(giocattoli);
+                System.out.println("Scegli giocattolo");
+                int idGiocattolo=s.nextInt();
+                    for (Giocattolo giocattolo :giocattoli) {
+                        if (idGiocattolo==giocattolo.getId()) {
+                            System.out.println("Hai acquistato"+giocattolo.getNome());
+                            giocattoli.remove(giocattolo);
+                        }
+                    }
+                }
+            }
+            
         }
-        
     }
-}
+
+
 

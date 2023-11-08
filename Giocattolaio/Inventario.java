@@ -36,6 +36,7 @@ public class Inventario {
         System.out.println("-------Elenco Giocattoli---------");
         for (Giocattolo giocattolo : giochi) {
             System.out.println(giocattolo.toString());
+        
         }
     }
 }

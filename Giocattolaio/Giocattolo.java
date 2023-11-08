@@ -4,8 +4,8 @@ package Giocattolaio;
  * Giocattolo
  */
 public class Giocattolo {
-    private final String codiceGiocattolo;
-    private static int id=1;
+
+    private int id;
     private String nome;
     private double prezzo;
     private int età_cons;//età consiglitata
@@ -14,19 +14,22 @@ public class Giocattolo {
         this.id=id;
         this.nome=nome;
         this.prezzo=prezzo;
-        codiceGiocattolo=nome+"Prod"+id;
-        id++;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     @Override
     public String toString() {
-        String descrizione=" ";
-
-        descrizione+="Nome Giocattolo:"+this.nome;
+        String descrizione="";
+        
+        descrizione+="Id Giocattolo:"+this.id;
+        descrizione+="\nNome Giocattolo:"+this.nome;
         descrizione+="\nPrezzo:"+this.prezzo;
         descrizione+="\nEtà consigliata:"+this.età_cons;
 
