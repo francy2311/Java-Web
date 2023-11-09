@@ -9,6 +9,7 @@ public class Test {
         Scanner s=new Scanner(System.in);
         final String N_UTENTE="Francy308";
         
+        //ciao
         String n_utente=" ";
         int scelta=0;
 
